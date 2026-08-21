@@ -1,4 +1,17 @@
-# Actividad — Paradigmas de Programación (UDESA)
+<!--
+TODO (quien crea la actividad, antes de publicarla a los alumnos):
+  - Reemplazar el título y completar el enunciado acá abajo.
+  - Borrar este bloque de TODO cuando esté listo.
+  - Revisar el Makefile: asume código + tests de gtest en la raíz sin
+    main() propio. Si la actividad es distinta (ejercicio de caja negra,
+    proyecto con GUI + tests separados, etc.) hay que ajustarlo -- ver los
+    comentarios del Makefile.
+  - Si la actividad no tiene GUI, borrar esa sección de este README.
+-->
+
+# [Nombre de la actividad]
+
+[Enunciado acá.]
 
 ## Entorno
 
@@ -33,12 +46,13 @@ funcione.
 
 ## Debug
 
-`gdb` y `valgrind` están instalados y configurados. Poné un breakpoint
-clickeando a la izquierda del número de línea y apretá **F5** (usa
-`.vscode/launch.json`, que ya compila con `make build` antes de arrancar).
+`gdb` y `valgrind` están instalados y configurados. Antes de usar F5, editá
+`.vscode/launch.json` y reemplazá `NOMBRE_DEL_EJECUTABLE` (aparece dos
+veces) por el nombre real de tu binario — es un placeholder a propósito,
+F5 no va a andar hasta que lo cambies.
 
-Si la actividad cambia el nombre del ejecutable (el Makefile de este
-template genera `run_tests`), actualizá `program` en `.vscode/launch.json`.
+Con eso hecho: poné un breakpoint clickeando a la izquierda del número de
+línea y apretá **F5** (compila con `make build` antes de arrancar).
 
 Para memory checks:
 
