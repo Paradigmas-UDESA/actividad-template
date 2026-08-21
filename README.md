@@ -33,8 +33,14 @@ funcione.
 
 ## Debug
 
-`gdb` y `valgrind` están instalados y configurados (breakpoints funcionan
-desde la UI de VS Code). Para memory checks:
+`gdb` y `valgrind` están instalados y configurados. Poné un breakpoint
+clickeando a la izquierda del número de línea y apretá **F5** (usa
+`.vscode/launch.json`, que ya compila con `make build` antes de arrancar).
+
+Si la actividad cambia el nombre del ejecutable (el Makefile de este
+template genera `run_tests`), actualizá `program` en `.vscode/launch.json`.
+
+Para memory checks:
 
 ```sh
 make valgrind

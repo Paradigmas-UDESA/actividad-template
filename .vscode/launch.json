@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // Debugs the binary the starter Makefile builds (run_tests). If the
+      // activity replaces the Makefile with a different target (e.g.
+      // TP-Hive's "hive"), update "program" and "preLaunchTask" to match.
+      "name": "gdb: run_tests",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/run_tests",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "make build"
+    }
+  ]
+}
